@@ -1,31 +1,16 @@
-var inputElement = document.querySelector('input[type="text"]')
-    inputElement.oninput = function(e) {
-        console.log(e.target.value)
-    }
+let btn = document.getElementById('btn')
+let remove = document.getElementById('remove')
+let className = document.querySelector('.red')
+let greenClass = document.querySelector('.green')
 
-var checkElement = document.querySelector('input[type="checkbox"]')
-    checkElement.onchange = function(e) {
-        console.log(e.target.checked)
-    }
+function showmBtn() {
+    greenClass.classList.add('red')
+}
 
-let selectElement = document.querySelector('select')
-    selectElement.oninput = function(e) {
-        console.log(e.target.value)
-    }
+function hideBtn() {
+    greenClass.classList.remove('red')
+}
 
-// keyborud
-    document.onkeydown = function(e) {
-        console.log(e.which)
 
-        switch (e.which) {
-            case 27 :
-            console.log('I LOVE YOU SO MUCH')
-            break
-
-            case 65:
-            console.log('I LOVE YOU TOO')
-            break
-        
-        }
-
-    }
+btn.addEventListener('click',showmBtn)
+remove.addEventListener('click', hideBtn)
